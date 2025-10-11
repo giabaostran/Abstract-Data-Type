@@ -175,6 +175,34 @@ public class ArrayStack implements ListInterface {
         System.out.println("Size: " + n);
     }
 
+    public void addAll(Object toAdd[]) {
+        for (Object object : toAdd) {
+            add(object);
+        }
+    }
+
+    public void reverse() {
+        int left = 0, right = n - 1;
+        while (left < right) {
+            Object temp = get(right);
+            set(right, get(left));
+            set(left, temp);
+            left++;
+            right--;
+        }
+    }
+
+    public Object[] subList(int from, int to) {
+        // int wrapped_from = (from + n) % list.length;
+        // int wrapped_to = (from + n) % list.length;
+        // assume all input is ok
+        Object[] to_return = new Object[to - from];
+        for (int i = 0; i < to - from; i++) {
+            to_return[i] = get(from + i);
+        }
+        return to_return;
+    }
+
     // ==================== ARRAY STACK ====================
     public static void runArrayStack(Scanner sc, ArrayStack stack) {
         while (true) {
