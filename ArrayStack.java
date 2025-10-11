@@ -176,9 +176,7 @@ public class ArrayStack implements ListInterface {
     }
 
     // ==================== ARRAY STACK ====================
-    public static void runArrayStack(ArrayStack stack) {
-        Scanner sc = new Scanner(System.in);
-
+    public static void runArrayStack(Scanner sc, ArrayStack stack) {
         while (true) {
             System.out.println("\n===== ARRAY STACK MENU =====");
             System.out.println("1. Push element");
@@ -240,7 +238,6 @@ public class ArrayStack implements ListInterface {
                 case 7 -> System.out.println(stack.isEmpty() ? "Stack is empty." : "Stack is not empty.");
                 case 0 -> {
                     System.out.println("Exiting ArrayStack test...");
-                    sc.close();
                     return;
                 }
                 default -> System.out.println("Invalid choice. Try again.");

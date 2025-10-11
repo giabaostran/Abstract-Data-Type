@@ -205,8 +205,7 @@ public class ArrayDeque {
      * Users can add/remove elements from front, back, or by index,
      * print the deque, check size, clear it, or exit.
      */
-    public static void runArrayDeque(ArrayDeque deque) {
-        Scanner sc = new Scanner(System.in);
+    public static void runArrayDeque(Scanner sc, ArrayDeque deque) {
 
         while (true) {
             System.out.println("\n===== ARRAY DEQUE MENU =====");
@@ -290,7 +289,6 @@ public class ArrayDeque {
                 }
                 case 10 -> System.out.println(deque.isEmpty() ? "Deque is empty." : "Deque is not empty.");
                 case 0 -> {
-                    sc.close();
                     System.out.println("Exiting ArrayDeque menu...");
                     return;
                 }

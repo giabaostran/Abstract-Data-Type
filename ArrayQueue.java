@@ -158,9 +158,7 @@ public class ArrayQueue {
      * Static method to run an interactive menu for testing the ArrayQueue.
      * Allows adding/removing elements, printing, clearing, and checking size.
      */
-    public static void runArrayQueue(ArrayQueue queue) {
-        Scanner sc = new Scanner(System.in);
-
+    public static void runArrayQueue(Scanner sc, ArrayQueue queue) {
         while (true) {
             System.out.println("\n===== ARRAY QUEUE MENU =====");
             System.out.println("1. Add First");
@@ -212,7 +210,6 @@ public class ArrayQueue {
                 case 8 -> System.out.println(queue.isEmpty() ? "Queue is empty." : "Queue is not empty.");
                 case 0 -> {
                     System.out.println("Exiting ArrayQueue menu...");
-                    sc.close();
                     return;
                 }
                 default -> System.out.println("Invalid option. Try again.");
