@@ -114,6 +114,7 @@ public class DualArrayStack {
             ArrayStack new_back = new ArrayStack();
             new_front.addAll(back.subList(0, s));
             new_front.reverse();
+            new_front.addAll(front.subList(0, front.size()));
             new_back.addAll(back.subList(s, back.size()));
             front = new_front;
             back = new_back;
