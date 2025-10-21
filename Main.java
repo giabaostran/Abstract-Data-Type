@@ -15,6 +15,7 @@ public class Main {
             System.out.println("2. ArrayQueue");
             System.out.println("3. ArrayDeque");
             System.out.println("4. DualArrayStack");
+            System.out.println("5. RootishArrayStack");
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
 
@@ -31,6 +32,7 @@ public class Main {
                 case 2 -> ArrayQueue.runArrayQueue(kb, new ArrayQueue());
                 case 3 -> ArrayDeque.runArrayDeque(kb, new ArrayDeque());
                 case 4 -> DualArrayStack.runDualArrayStack(kb, new DualArrayStack());
+                case 5 -> RootishArrayStack.runRootishArrayStack(kb, new RootishArrayStack());
                 case 0 -> {
                     System.out.println("Exiting program...");
                     return;
